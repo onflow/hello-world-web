@@ -1,0 +1,2 @@
+Bindings is a convenient place to add integration points with the frontend code. This allows keeping cadence separate from the frontend code
+[More information](https://developers.flow.com/cadence/intro)
