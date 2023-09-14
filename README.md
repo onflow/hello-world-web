@@ -10,3 +10,17 @@ FCL is used to communicate with the Flow network. [More information](https://dev
 # Flow blockchain 
 Flow runs on smart contracts written in Cadance. [More information](https://developers.flow.com/cadence)
 
+# Getting started
+```
+git clone https://github.com/onflow/hello-world-web.git
+cd hello-world-web
+npm install
+npm run dev
+
+```
+Open a web browser and go to `http://localhost:3000` to see the very simple UI. 
+ - click the "Query Contract" button to use fcl to call the HelloWorld contract to get the greeting.
+ - The greeting is displayed as the result
+
+ That is very simple to call a smart contract.
+ 
