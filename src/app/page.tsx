@@ -8,22 +8,24 @@ import HelloWorld from "./components/helloWorld";
 
 export default function Home() {
   return (
-    <main className="grid grid-flow-row m-24 gap-40">
-      <div className="text-xl flex justify-center">
-        Welcome to Flow, Hello World Example
-      </div>
+    <div className="flex flex-col min-h-[95vh]">
+      <header className="bg-blue-600 text-white p-4">
+        <h1 className="text-xl">Welcome to Flow, Simple Hello World Example</h1>
+      </header>
 
-      <div className="flex justify-center">
+      <main className="flex-grow flex items-center justify-center">
         <HelloWorld />        
-      </div>
-      <div className='flex justify-center'>
-        <a className="text-xl underline m-24" href="https://developers.flow.com/" 
-        target="_blank"
-        rel="noopener noreferrer"
+      </main>
+
+      <footer className="bg-blue-600 text-white p-4 mt-auto">
+        Learn more about Flow, head over to the
+        <a className="text-lg underline px-1" href="https://developers.flow.com/" 
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Learn more about Flow
+         developer documentation
         </a>
-      </div>
-    </main>
-  )
+      </footer>
+    </div>
+  )  
 }
