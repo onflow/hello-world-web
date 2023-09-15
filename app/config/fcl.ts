@@ -1,6 +1,6 @@
 import { config } from '@onflow/fcl'
-import { ACCESS_NODE_URLS } from '../constants'
-import flowJSON from '../../../flow.json'
+import flowJSON from '../flow.json'
+import { ACCESS_NODE_URLS } from '@/constants'
 
 const flowNetwork = "testnet"
 console.log("Configuring fcl for testnet")

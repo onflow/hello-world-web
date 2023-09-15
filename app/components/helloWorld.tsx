@@ -1,6 +1,7 @@
 "use client"
+import '../config/fcl'
 import { useState } from 'react'
-import { getHelloWorldGreeting } from '../../../cadence/bindings/getHelloWorld'
+import { getHelloWorldGreeting } from '../cadence/bindings/getHelloWorld'
 
 export default function HelloWorld() {
     const [greeting, setGreeting] = useState(null)
