@@ -5,30 +5,41 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
+npm i
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cadence
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+How to use remote FLIX template json files
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Generate
+Using a separate HelloWorld repository [HelloWorld FLIX](https://github.com/onflow/hello-world-flix/)
 
-## Learn More
+Use these urls to create cadence binding files
+- https://raw.githubusercontent.com/onflow/hello-world-flix/main/cadence/templates/ReadHelloWorld.template.json
+- https://raw.githubusercontent.com/onflow/hello-world-flix/main/cadence/templates/UpdateHelloWorld.template.json
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Read HelloWorld greeting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Read the HelloWorld greeting. The following command will generate a binding file aka `package` file in TypeScript, javaScript is also supported.
+```shell
+flow flix package https://raw.githubusercontent.com/onflow/hello-world-flix/main/cadence/templates/ReadHelloWorld.template.json --lang ts --save cadence/readHelloWorld.ts
+```
 
-## Deploy on Vercel
+### Update HelloWorld greeting
+As another example, generate TypeScript to update the HelloWorld greeting
+```shell
+flow flix package https://raw.githubusercontent.com/onflow/hello-world-flix/main/cadence/templates/UpdateHelloWorld.template.json --lang ts --save cadence/updateHelloWorld.ts
+```
+This commands were run form the `app` directory but can be run as part of a build process and `--save` tells the command where to store the resulting files
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Releases
+`hello-world-flix` uses releases so the template files have been versioned. This makes the template files more reliable.
+ - Read HelloWorld greeting: 
+ https://raw.githubusercontent.com/onflow/hello-world-flix/v0.1.0/cadence/templates/ReadHelloWorld.template.json
+ - Update HelloWorld greeting: 
+ https://raw.githubusercontent.com/onflow/hello-world-flix/v0.1.0/cadence/templates/UpdateHelloWorld.template.json
