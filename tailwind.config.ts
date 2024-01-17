@@ -15,6 +15,14 @@ const config: Config = {
       },
     },
   },
+  variants: {
+    extend: {
+      backgroundColor: ['disabled'],
+      textColor: ['disabled'],
+      borderColor: ['disabled'],
+      // Add other styles as needed
+    },
+  },
   plugins: [],
 }
 export default config
